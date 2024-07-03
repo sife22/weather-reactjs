@@ -14,7 +14,7 @@ Il s'agit d'un tp simple construite à l'aide de React.js. Il permet aux utilisa
 ## Pour commencer
 Pour exécuter l'application météo localement, suivez ces étapes :
 1. Clonez le dépôt :
-   git clone https://github.com/sife22/weather-app.git
+   git clone https://github.com/sife22/weather-reactjs.git
 2. Accédez au répertoire du projet :
    cd weather-app
 3. Installez les dépendances :
