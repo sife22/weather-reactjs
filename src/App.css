@@ -104,10 +104,95 @@
       font-family: "Fustat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+    } 
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 30px;
+    border-radius: 5px;
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    min-height: 100vh
+  }
+
+  .search__container {
+    padding: 10px;
+    gap: 10px;
+
+    input {
+      padding: 10px;
+      font-size: 16px;
     }
 
-    
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
 
-    
+  .results__container {
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+
+    .city__temp__error,
+    .city__temp {
+      font-size: 16px;
+    }
+
+    .line {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 40px;
+    border-radius: 8px;
+  }
+
+  .search__container {
+    padding: 15px;
+    gap: 15px;
+
+    input {
+      padding: 12px;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 18px;
+    }
+  }
+
+  .results__container {
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 15px;
+
+    .city__temp__error,
+    .city__temp {
+      font-size: 18px;
+    }
+
+    .line {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
   }
 }
