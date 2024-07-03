@@ -7,65 +7,40 @@ function App() {
   const [weatherdata, setWeatherdata] = useState(null);
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`;
-  const srcicon = `http://openweathermap.org/img/wn/${iconcode}@2x.png`;
 
   const searchLocation = async (e) => {
     e.preventDefault();
     await fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setIconcode(data.weather[0].icon);
         setWeatherdata(data);
       });
   };
 
   return (
     <div className="app">
-      <h1>Weather App</h1>
-      <form className="search">
-        <input
-          type="text"
-          placeholder="Enter your city ..."
-          onChange={(e) => setLocation(e.target.value)}
-        />
-        <button onClick={searchLocation}>Search</button>
-      </form>
-      {weatherdata != null ? (
-        <div className="card">
-          <div className="weathercard">
-            <div className="leftcard">
-              <div className="temp">
-                <p>{weatherdata.main.temp} °C</p>
-              </div>
-              <div className="location">
-                <span>{weatherdata.name}</span>
-              </div>
-            </div>
-            <div className="rightcard">
-              <div className="icon">
-                <img src={srcicon} alt="weather icon" />
-              </div>
-              <div className="details">
-                <div className="wind">
-                  <p>
-                    Wind: <br />
-                    {weatherdata.wind.speed} Km/h
-                  </p>
-                </div>
-                <div className="humidity">
-                  <p>
-                    humidity: <br />
-                    {weatherdata.main.humidity} %
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="container">
+        <h1>Weather App<span>.</span></h1>
+        <div className="search__container">
+          <input type="text"
+            placeholder="Enter your city"
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <button type="submit"  onClick={searchLocation}>Search</button>
         </div>
-      ) : (
-        ""
-      )}
+        {weatherdata ? (
+
+        <div className="results__container">
+          <div className="city__temp">
+            <h2 className="city">{weatherdata.name}</h2>
+            <h2 className="temp">{weatherdata.main.temp} °C</h2>
+          </div>
+          <div className="line"></div>
+          <p>Wind : {weatherdata.wind.speed} Km/h</p>
+          <p>Humidity : {weatherdata.main.humidity}</p>
+        </div>
+        ) : ""}
+      </div>
     </div>
   );
 }

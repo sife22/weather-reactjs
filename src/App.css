@@ -1,102 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
-@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
-.App {
-  text-align: center;
-}
-
-h1 {
-  padding: 30px;
-  font-size: 60px;
-}
-
-.search {
-  padding: 20px;
-  /* display: flex; */
-}
-
-input {
-  padding: 20px;
-  font-size: 20px;
-  font-family: "Roboto Mono", monospace;
-  border-radius: 5px;
-  margin: 2px;
-  border: 1px lightblue solid;
-}
-
-input:focus {
-  background-color: lightblue;
-  border: none;
-}
-
-button {
-  padding: 20px;
-  font-size: 20px;
-  font-family: "Roboto Mono", monospace;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 2px;
-  border: 1px lightblue solid;
-}
-
-button:hover {
-  background-color: lightblue;
-}
-
-.card {
-  margin: 100px auto;
-  width: 400px;
-}
-
-.weathercard {
-  display: flex;
-  width: 400px;
-  height: 200px;
-  position: relative;
-}
-
-.leftcard {
-  width: 220px;
-  height: 200px;
-  background: dodgerblue;
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
+.container {
+  padding: 50px;
+  border-radius: 10px;
+  align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
-}
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: rgb(120, 188, 255);
 
-.temp {
-  padding: 20px;
-  margin-top: 10px;
-  font-size: 50px;
-}
+  span{
+    font-weight: bold;    
+    color: yellow;
+  }
+  h1 {
+    font-family: "Fustat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
 
-.location {
-  width: 220px;
-  padding: 30px;
-  font-size: 20px;
-  text-transform: uppercase;
-}
+  .search__container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
 
-.rightcard {
-  width: 180px;
-  height: 200px;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
+    input {
+      font-family: "Fustat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
 
-.icon {
-  font-family: weathericons;
-  width: 180px;
-  height: 160px;
-  padding-top: 30px;
-}
+  font-style: normal;
+      padding: 15px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      border-radius: 10px;
+    }
 
-.details {
-  display: flex;
-  width: 180px;
-  height: 40px;
-  justify-content: space-around;
-  background-color: rgb(76, 197, 238);
+    button {
+      padding: 15px;
+      font-size: 20px;
+
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      transition: 1s;
+    }
+
+    button:hover{
+      cursor: pointer;
+      background-color: rgb(81, 245, 48);
+      transition: 0.7s;
+    }
+  }
+
+  .results__container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .city__temp{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Fustat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .line {
+      height: 5px;
+      margin-bottom: 40px;
+      background: linear-gradient(to bottom,
+          transparent 2px,
+          black 2px,
+          black 3px,
+          transparent 3px);
+    }
+
+    p{
+      font-family: "Fustat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    }
+
+    
+
+    
+  }
 }
