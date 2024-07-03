@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+.App {
+  text-align: center;
+}
+
+h1 {
+  padding: 30px;
+  font-size: 60px;
+}
+
+.search {
+  padding: 20px;
+  /* display: flex; */
+}
+
+input {
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  border-radius: 5px;
+  margin: 2px;
+  border: 1px lightblue solid;
+}
+
+input:focus {
+  background-color: lightblue;
+  border: none;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+  border: 1px lightblue solid;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+.card {
+  margin: 100px auto;
+  width: 400px;
+}
+
+.weathercard {
+  display: flex;
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+
+.leftcard {
+  width: 220px;
+  height: 200px;
+  background: dodgerblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.temp {
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.location {
+  width: 220px;
+  padding: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.rightcard {
+  width: 180px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon {
+  font-family: weathericons;
+  width: 180px;
+  height: 160px;
+  padding-top: 30px;
+}
+
+.details {
+  display: flex;
+  width: 180px;
+  height: 40px;
+  justify-content: space-around;
+  background-color: rgb(76, 197, 238);
+}
