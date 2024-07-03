@@ -5,16 +5,28 @@ function App() {
   const [location, setLocation] = useState("");
   const [iconcode, setIconcode] = useState();
   const [weatherdata, setWeatherdata] = useState(null);
+  const [error, setError] = useState('');
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`;
 
-  const searchLocation = async (e) => {
-    e.preventDefault();
-    await fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setWeatherdata(data);
-      });
+  const searchLocation = async () => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error ${response.status}`);
+      }
+      const data = await response.json();
+      setError('')
+      setWeatherdata(data);
+
+    } catch (error) {
+      if (error.message.includes('404')) {
+        setWeatherdata(null);
+        setError('Maybe city not found')
+      } else {
+        console.error('Error fetching weather data:', error);
+      }
+    }
   };
 
   return (
@@ -28,8 +40,12 @@ function App() {
           />
           <button type="submit"  onClick={searchLocation}>Search</button>
         </div>
+        {error && (<div className="results__container">
+          <div className="city__temp__error">
+          <h2 className="error">{error}</h2>
+          </div>
+        </div>)}
         {weatherdata ? (
-
         <div className="results__container">
           <div className="city__temp">
             <h2 className="city">{weatherdata.name}</h2>
