@@ -38,23 +38,27 @@ function App() {
             placeholder="Enter your city"
             onChange={(e) => setLocation(e.target.value)}
           />
-          <button type="submit"  onClick={searchLocation}>Search</button>
+          <button type="submit" onClick={searchLocation}>Search</button>
         </div>
         {error && (<div className="results__container">
           <div className="city__temp__error">
-          <h2 className="error">{error}</h2>
+            <h2 className="error">{error}</h2>
           </div>
         </div>)}
         {weatherdata ? (
-        <div className="results__container">
-          <div className="city__temp">
-            <h2 className="city">{weatherdata.name}</h2>
-            <h2 className="temp">{weatherdata.main.temp} °C</h2>
+          <div className="results__container">
+            <div className="city__temp">
+              <h2 className="city">{weatherdata.name}</h2>
+              <h2 className="temp">{weatherdata.main.temp} °C</h2>
+            </div>
+            <div className="line"></div>
+            <p><span class="material-symbols-outlined">
+wind_power
+</span>Wind : {weatherdata.wind.speed} Km/h</p>
+            <p><span class="material-symbols-outlined">
+humidity_percentage
+</span>Humidity : {weatherdata.main.humidity}</p>
           </div>
-          <div className="line"></div>
-          <p>Wind : {weatherdata.wind.speed} Km/h</p>
-          <p>Humidity : {weatherdata.main.humidity}</p>
-        </div>
         ) : ""}
       </div>
     </div>
