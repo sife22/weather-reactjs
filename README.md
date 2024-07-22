@@ -26,7 +26,7 @@ Pour exécuter l'application météo localement, suivez ces étapes :
 6. Ouvrez votre navigateur et visitez 'http://localhost:3000' pour voir l'application.
 
 ## Déploiement
-Cette application météo est hébergée sur Vercel. Vous pouvez visiter l'application sur : https://weather-reactjs-seven.vercel.app/
+Cette application météo est hébergée sur Vercel. Vous pouvez visiter l'application sur : https://weather-app-reactjs-master.netlify.app/
 
 ## Améliorations futures
 - Ajouter la possibilité d'afficher les prévisions météorologiques pour les prochains jours
