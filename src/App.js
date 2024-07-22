@@ -3,7 +3,6 @@ import "./App.css";
 
 function App() {
   const [location, setLocation] = useState("");
-  const [iconcode, setIconcode] = useState();
   const [weatherdata, setWeatherdata] = useState(null);
   const [error, setError] = useState('');
 
