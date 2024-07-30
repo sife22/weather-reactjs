@@ -1,12 +1,12 @@
 # Application de météo 
-Il s'agit d'un tp simple construite à l'aide de ReactJs. Il permet aux utilisateurs de rechercher des informations météorologiques pour leurs différentes villes.
+Il s'agit d'un TP basique réalisé en utilisant ReactJs. Les utilisateurs ont la possibilité de chercher des informations météorologiques pour leurs différentes villes..
 
 ## Fonctionnalités
 - Rechercher des informations météorologiques par nom de ville
-- Afficher la température actuelle, les conditions météorologiques et le nom de la ville
+- Afficher la température actuelle, les conditions météorologiques tels que (humidité, vent) et le nom de la ville
   
 ## Technologies utilisées
-- React.js
+- ReactJs
 - Axios (pour effectuer des requêtes API)
 - API OpenWeatherMap (pour obtenir les données)
 - HTML/CSS (pour l'interface utilisateur)
@@ -28,10 +28,10 @@ Pour exécuter l'application météo localement, suivez ces étapes :
 ## Déploiement
 Cette application météo est hébergée sur Netlify. Vous pouvez visiter l'application sur : https://weather-app-reactjs-master.netlify.app/
 
-## Améliorations futures
-- Ajouter la possibilité d'afficher les prévisions météorologiques pour les prochains jours
-- Mettre en place un affichage d'informations météorologiques plus détaillé, comme la vitesse du vent, l'humidité...
-- Améliorer l'interface utilisateur avec un style et des animations supplémentaires
+## Améliorations possibles à l'avenir
+- Ajouter la possibilité d'afficher les prévisions météorologiques pour les prochains jours.
+- Mettre en place un affichage d'informations météorologiques plus détaillé...
+- Améliorer l'interface utilisateur avec un style et des animations supplémentaires.
 
 ## Contact
 - Téléphone - Phone : +212 669 08 44 87
