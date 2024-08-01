@@ -5,7 +5,6 @@ Il s'agit d'un TP basique réalisé en utilisant ReactJs. Les utilisateurs ont l
 - Rechercher des informations météorologiques par nom de ville
 - Afficher la température actuelle, les conditions météorologiques tels que (humidité, vent) et le nom de la ville
 
-<p align="center"><a href="#" target="_blank"><img src="./public/conception.png" width="90%" alt="App"></a></p>
   
 ## Technologies utilisées
 - ReactJs
